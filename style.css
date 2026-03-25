@@ -1,0 +1,15 @@
+#Collatz {
+    height: 250px;
+    margin-left: 25px;
+    float: left;
+    padding-right: 15px;
+}
+
+#kep {
+    float: right;
+    height: 500px
+}
+
+p {
+    font-size: large;
+}
