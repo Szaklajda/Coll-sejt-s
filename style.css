@@ -1,13 +1,13 @@
 #Collatz {
-    height: 250px;
+    height: 200px;
     margin-left: 25px;
     float: left;
     padding-right: 15px;
 }
 
-#kep {
+#flw {
+    height: 500px;
     float: right;
-    height: 500px
 }
 
 p {
