@@ -1,20 +1,29 @@
 body {
-    }
+    background-color: #eee;
+}
 
 #Collatz {
     height: 200px;
     margin-left: 25px;
     float: left;
-    padding-right: 15px;
+    margin-right: 15px;
+    border: 3px solid black;
 }
 
 #flw {
     height: 500px;
     float: right;
+    border: 3px solid black;
 }
 
 #kozep {
     text-align: center;
+}
+
+ul {
+    font-size: large;
+    padding-left: 24px ;
+    padding-right: 25px;
 }
 
 h1 {
@@ -29,6 +38,8 @@ h3 {
 
 p {
     font-size: large;
+    padding-left: 24px ;
+    padding-right: 25px;
 }
 
 input, button {
