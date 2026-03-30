@@ -19,10 +19,13 @@
     </p>
 
     <p>
-        Például ha a 7-ből indulunk ki (amely páratlan), akkor a rákövetkező elem 3x7+1=22,  amely páros, így a következő elem a 22 fele, azaz 11 lesz. Tovább folytatva a szabály alkalmazását a 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1, 4, 2, 1, ... sorozatot kapjuk.
+        Például ha a 7-ből indulunk ki (amely páratlan), akkor a rákövetkező elem 3x7+1=22, amely páros, így a következő
+        elem a 22 fele, azaz 11 lesz. Tovább folytatva a szabály alkalmazását a 7, 22, 11, 34, 17, 52, 26, 13, 40, 20,
+        10, 5, 16, 8, 4, 2, 1, 4, 2, 1, ... sorozatot kapjuk.
     </p>
 
-        A Collatz-sejtés ábra letölthető itt:<a href="Collatz-sejtés.fprg" download="Collatz-sejtés.fprg">A Collatz-sejtés</a>
+    <p>A Collatz-sejtés ábra letölthető itt:<a href="Collatz-sejtés.fprg" download="Collatz-sejtés.fprg">A
+            Collatz-sejtés</a></p>
 
     <h2>A Collatz-sejtés kitatlálója: Lothar Collatz</h2>
     <p><img src="Lothar_Collatz.jpg" alt="Lothar Collatz" id="Collatz"></p>
@@ -36,8 +39,49 @@
         szerint bármely pozitív egész számból kiindulva, a megadott szabállyal a sorozat végül a 4-2-1 ciklusba jut.
     </p>
     <p>
-        Akadémiai karrier: Hosszú ideig a Hamburgi Egyetemen dolgozott professzorként, ahol megalapította a Numerikus Matematika Intézetet.
+        Akadémiai karrier: Hosszú ideig a Hamburgi Egyetemen dolgozott professzorként, ahol megalapította a Numerikus
+        Matematika Intézetet.
     </p>
+
+    <h3>
+        <p><input type="number" id="numberInput" placeholder="Adj meg egy számot">
+            <button onclick="calculate()">Számol</button>
+
+        <div id="result"></div>
+    </h3>
+
+    <script>
+        function calculate() {
+            let n = parseInt(document.getElementById("numberInput").value);
+            let resultDiv = document.getElementById("result");
+
+            if (isNaN(n) || n <= 0) {
+                resultDiv.innerHTML = "Adj meg egy pozitív számot!";
+                return;
+            }
+
+            let sequence = [n];
+
+            while (n !== 1) {
+                if (n % 2 === 0) {
+                    n = n / 2;
+                } else {
+                    n = 3 * n + 1;
+                }
+                sequence.push(n);
+            }
+
+            resultDiv.innerHTML = `
+                <p><strong>Sorozat:</strong> ${sequence.join(" → ")}</p>
+                <p><strong>Lépések száma:</strong> ${sequence.length - 1}</p>
+            `;
+        }
+    </script>
+    </p>
+
+    <p id="kozep">Ez egy AI segítségévél készült példa!</p>
+
+
 
 </body>
 

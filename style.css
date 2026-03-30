@@ -1,3 +1,6 @@
+body {
+    }
+
 #Collatz {
     height: 200px;
     margin-left: 25px;
@@ -10,6 +13,30 @@
     float: right;
 }
 
+#kozep {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+
 p {
     font-size: large;
 }
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#output {
+    margin-top: 20px;
+    word-wrap: break-word;
+    }
